@@ -39,21 +39,21 @@ return {
         -- Navigation
 
         -- Navigation
-        map('n', '}} }', function()
+        map('n', ']h', function()
           if vim.wo.diff then
-            vim.cmd.normal { ']c', bang = true }
+            vim.cmd.normal { ']h', bang = true }
           else
             gitsigns.nav_hunk 'next'
           end
-        end)
+        end, { desc = 'Go to Next [H]unk' })
 
-        map('n', '{{', function()
+        map('n', '[h', function()
           if vim.wo.diff then
-            vim.cmd.normal { '[c', bang = true }
+            vim.cmd.normal { '[h', bang = true }
           else
             gitsigns.nav_hunk 'prev'
           end
-        end)
+        end, { desc = 'Go to Prev [H]unk' })
 
         map('n', '<leader>ga', gitsigns.stage_hunk)
         map('v', '<leader>ga', function()
