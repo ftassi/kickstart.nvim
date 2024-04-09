@@ -68,3 +68,8 @@ vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.relativenumber = true
+-- Configure ripgrep to use a vim friendly from
+-- Telescope will have its own ripgrep setting
+if vim.fn.exepath 'rg' == 1 then
+  vim.opt.grepprg = 'rg --vimgrep'
+end
