@@ -5,6 +5,7 @@
 return {
   { 'AndrewRadev/tagalong.vim' },
   { 'kburdett/vim-nuuid' },
+  { 'vim-scripts/ReplaceWithRegister' },
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
