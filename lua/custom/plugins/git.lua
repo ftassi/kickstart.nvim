@@ -18,6 +18,20 @@ return {
     end,
   },
   {
+    'junegunn/gv.vim',
+    dependencies = {
+      'tpope/vim-fugitive',
+    },
+    config = function()
+      vim.keymap.set('n', '<leader>gl.', '<Cmd>:GV<CR>', { desc = '[G]it [L]og' })
+      vim.keymap.set('n', '<leader>glf', '<Cmd>:GV!<CR>', { desc = '[G]it [L]og current [F]ile' })
+      vim.keymap.set('n', '<leader>glb', '<Cmd>:GV --first-parent<CR>', { desc = '[G]it [L]og current [B]ranch' })
+    end,
+    -- nmap <leader>gl :GV<cr>
+    -- nmap <leader>glf :GV!<cr>
+    -- nmap <leader>glb :GV --first-parent<cr>
+  },
+  {
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
