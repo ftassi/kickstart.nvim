@@ -3,6 +3,12 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  { 'ThePrimeagen/vim-be-good' },
+  { 'github/copilot.vim' },
+  { 'janko-m/vim-test' },
+  { 'alx741/vim-rustfmt' },
+  { 'tpope/vim-abolish' },
+  { 'adelarsq/vim-matchit' },
   { 'AndrewRadev/tagalong.vim' },
   { 'kburdett/vim-nuuid' },
   { 'vim-scripts/ReplaceWithRegister' },
