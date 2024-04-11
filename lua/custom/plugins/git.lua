@@ -69,19 +69,20 @@ return {
           end
         end, { desc = 'Go to Prev [H]unk' })
 
-        map('n', '<leader>ga', gitsigns.stage_hunk)
+        map('n', '<leader>ga', gitsigns.stage_hunk, { desc = '[G]it [A]dd current hunk' })
         map('v', '<leader>ga', function()
           gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-        end)
-        map('n', '<leader>gA', gitsigns.undo_stage_hunk)
-        map('n', '<leader>gu', gitsigns.reset_hunk)
-        map('v', '<leader>gu', function()
+        end, { desc = '[G]it [A]dd current hunk' })
+        map('n', '<leader>gA', gitsigns.undo_stage_hunk, { desc = '[G]it Undo [A]dd current hunk' })
+        map('n', '<leader>gco', gitsigns.reset_hunk, { desc = '[G]it Check[O]ut current hunk' })
+        map('v', '<leader>gco', function()
           gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-        end)
-        map('n', '<leader>gp', gitsigns.preview_hunk)
+        end, { desc = '[G]it Check[O]ut current hunk' })
+        map('n', '<leader>gp', gitsigns.preview_hunk, { desc = '[G]it [P]review current hunk' })
         map('n', '<leader>gb', function()
           gitsigns.blame_line { full = true }
-        end)
+        end, { desc = '[G]it [B]lame current line' })
+        map('n', '<leader>tb', gitsigns.toggle_deleted, { desc = '[T]oggle [B]lame current line' })
         -- This conflicts with Goto Definition which is much more used
         -- TODO: I need to find another mapping for this
         -- map('n', '<leader>gd', gitsigns.diffthis)
