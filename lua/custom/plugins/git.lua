@@ -13,8 +13,8 @@ return {
     'tpope/vim-fugitive',
     config = function()
       vim.keymap.set('n', '<leader>gs', '<Cmd>:G<CR>', { desc = '[G]it [S]atus' })
-      vim.keymap.set('n', '<leader>gp', '<Cmd>:Git push<CR>', { desc = '[G]it [P]ush' })
-      vim.keymap.set('n', '<leader>gc', '<Cmd>:Git commit<CR>', { desc = '[G]it [C]ommit' })
+      vim.keymap.set('n', '<leader>Gp', '<Cmd>:Git push<CR>', { desc = '[G]it [P]ush' })
+      vim.keymap.set('n', '<leader>Gc', '<Cmd>:Git commit<CR>', { desc = '[G]it [C]ommit' })
     end,
   },
   -- TODO: This could be removed mapping fugitive git log with the right format
