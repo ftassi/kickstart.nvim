@@ -1,13 +1,3 @@
--- nmap <leader>gs :G<cr>
--- nmap <leader>gp :Git push<CR>
--- nmap <leader>gc :Git commitf<CR>
--- nmap <leader>gh <Plug>(GitGutterPreviewHunk)
--- nmap <leader>ga <Plug>(GitGutterStageHunk)
--- nmap <leader>gu <Plug>(GitGutterUndoHunk)
--- " Git log
--- nmap <leader>gl :GV<cr>
--- nmap <leader>glf :GV!<cr>
--- nmap <leader>glb :GV --first-parent<cr>
 return {
   {
     'tpope/vim-fugitive',
