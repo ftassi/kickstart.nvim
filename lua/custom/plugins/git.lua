@@ -82,7 +82,10 @@ return {
         map('n', '<leader>gb', function()
           gitsigns.blame_line { full = true }
         end)
-        map('n', '<leader>gd', gitsigns.diffthis)
+        -- This conflicts with Goto Definition which is much more used
+        -- TODO: I need to find another mapping for this
+        -- map('n', '<leader>gd', gitsigns.diffthis)
+        --
         -- map('n', '<leader>gS', gitsigns.stage_buffer)
         -- map('n', '<leader>gR', gitsigns.reset_buffer)
         -- map('n', '<leader>gD', function()
